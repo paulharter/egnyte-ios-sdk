@@ -38,10 +38,12 @@ class LoginViewController: UIViewController, WKUIDelegate, WKNavigationDelegate 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        /*
         let cancelButton = UIBarButtonItem.init(barButtonSystemItem: UIBarButtonSystemItem.cancel,
                                               target: self,
                                               action:#selector(didCancelAuthProcess))
         self.navigationItem.setLeftBarButton(cancelButton, animated: true)
+        */
         URLSession.shared.reset { 
             self.webView.load(self.urlRequest!)
         }
